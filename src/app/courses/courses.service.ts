@@ -4,10 +4,14 @@ import { Course } from "./course";
 @Injectable({
     providedIn: 'root'
 })
-export class courseService {
+export class CourseService {
 
   retrieveAll(): Course[] {
     return COURSES;
+  }
+
+  retrieveById(id: number): Course {
+    return Course.find((courseIterator: Course) => courseIterator.id === id);
   }
 
 }

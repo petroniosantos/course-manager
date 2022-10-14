@@ -1,9 +1,8 @@
-import { courseService } from './courses.service';
+import { CourseService } from './courses.service';
 import { Component, OnInit } from '@angular/core';
 import { Course } from './course';
 
 @Component ({
-    selector: 'app-course-list',
     templateUrl: './course-list.component.html'
 })
 export class CourseListComponent implements OnInit {
@@ -14,7 +13,7 @@ export class CourseListComponent implements OnInit {
 
     _filterBy!: string;
 
-    constructor(private courseService: courseService){}
+    constructor(private courseService: CourseService){}
 
     ngOnInit(): void {
       this._courses = this.courseService.retrieveAll();
