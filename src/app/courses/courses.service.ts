@@ -6,6 +6,10 @@ import { Course } from "./course";
 })
 export class courseService {
 
+  retrieveAll(): Course[] {
+    return COURSES;
+  }
+
 }
 
 var COURSES: Course[] = [
